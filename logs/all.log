@@ -1,0 +1,4 @@
+2018-09-06 09:11:47,647 [Dummy-1:123145368510464] [django.db.backends:111] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None

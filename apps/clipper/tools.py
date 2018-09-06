@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+public functions
+"""
 import re
 import time
 import logging

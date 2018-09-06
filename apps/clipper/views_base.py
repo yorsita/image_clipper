@@ -13,6 +13,9 @@ logger = logging.getLogger('clipper.app')
 
 
 class ClipperView(View):
+    """
+    图片裁剪
+    """
     def get(self, request):
         """
         获取裁剪后的图片
