@@ -29,7 +29,7 @@ def get_image_info(full_path):
         info = dict()
         size_pat = re.compile(r'(h_\d*,w_\d*)')
         url_pat = re.compile(
-            r'(?:https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|](?:\.jpg|\.png)')
+            r'(?:https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]')
         size = size_pat.findall(full_path)
         if not size:
             status['code'] = 0
@@ -87,7 +87,7 @@ def get_image(url):
                 file.write(response.content)
             return image_filename, content_type
         else:
-            return 0
+            return 0, 0
     except Exception as e:
         logging.error(e)
         traceback.print_exc()
