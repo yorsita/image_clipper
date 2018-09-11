@@ -25,4 +25,6 @@
 ## 项目中遇到的问题及解决方法：
 项目中主要遇到了以下这个问题：    
 
-对用户url请求体的获取。因为图片url链接经常会带有query参数，类似`https://timgsa.baidu.com/timg/?image&quality=80&size=b9999_10000&sec=1536229123287&di=696e08f26ecf418cdc3766f321c00d28&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D86ccfde9d01373f0f56a679b913f67cd%2Fd009b3de9c82d1589b303c23810a19d8bd3e42f5.jpg`，我在路由配置的时候本想直接在url中获取我所需的参数和图片url链接，但是url中`?`后面的内容都会被当作query参数处理，因此我修改了路由匹配的参数，不再在路由过滤的时候取得图片参数和url链接，改为在接口中直接获取整串用户传递过来的url请求体进行后续处理
+对用户url请求体的获取。因为图片url链接经常会带有query参数，类似    
+`https://timgsa.baidu.com/timg/?image&quality=80&size=b9999_10000&sec=1536229123287&di=696e08f26ecf418cdc3766f321c00d28&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D86ccfde9d01373f0f56a679b913f67cd%2Fd009b3de9c82d1589b303c23810a19d8bd3e42f5.jpg`，    
+我在路由配置的时候本想直接在url中获取我所需的参数和图片url链接，但是url中`?`后面的内容都会被当作query参数处理，因此我修改了路由匹配的参数，不再在路由过滤的时候取得图片参数和url链接，改为在接口中直接获取整串用户传递过来的url请求体进行后续处理
