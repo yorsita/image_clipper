@@ -51,7 +51,7 @@ def get_image_info(full_path):
             status['code'] = 0
             status['message'] = '缺少图片url参数'
         else:
-            url = url[0]
+            url = url[0].rstrip('/')
             status['code'] = 1
             info['url'] = url
             info['status'] = status
@@ -91,7 +91,7 @@ def get_image(url):
     except Exception as e:
         logging.error(e)
         traceback.print_exc()
-        return 0
+        return 0, 0
 
 
 def clip_image(image_filename, size):
